@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industries_channels",
+  "info": {
+    "singularName": "industries-channel",
+    "pluralName": "industries-channels",
+    "displayName": "IndustriesChannel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "channelName": {
+      "type": "string"
+    },
+    "channelBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "channelDescription": {
+      "type": "blocks"
+    },
+    "industryIntroductionTitle": {
+      "type": "string"
+    },
+    "industryIntroductionContent": {
+      "type": "blocks"
+    },
+    "industryIntroductionImage": {
+      "type": "blocks"
+    },
+    "ResourcesandCapabilitiesTitle": {
+      "type": "string"
+    },
+    "ResourcesandCapabilitiesBriefIntroduction": {
+      "type": "blocks"
+    },
+    "ResourcesandCapabilitiesComponents": {
+      "type": "component",
+      "component": "common.symbol-components",
+      "repeatable": true
+    },
+    "SuccessfulCasesComponents": {
+      "type": "component",
+      "component": "common.image-components",
+      "repeatable": true
+    }
+  }
+}

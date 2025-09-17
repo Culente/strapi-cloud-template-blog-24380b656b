@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_common_image_links_components",
+  "info": {
+    "displayName": "ImageLinksComponents",
+    "icon": "cast"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Remark": {
+      "type": "text"
+    },
+    "Link": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

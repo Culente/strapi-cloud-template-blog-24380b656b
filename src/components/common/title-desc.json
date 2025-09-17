@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_common_title_descs",
+  "info": {
+    "displayName": "TitleDesc",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

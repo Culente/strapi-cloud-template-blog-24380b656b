@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "market_intelligences",
+  "info": {
+    "singularName": "market-intelligence",
+    "pluralName": "market-intelligences",
+    "displayName": "MarketIntelligence"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "channelName": {
+      "type": "string"
+    },
+    "channelBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "ServiceIntroductionTitle": {
+      "type": "string"
+    },
+    "ServiceIntroductionContent": {
+      "type": "blocks"
+    },
+    "ServiceIntroductionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "ServiceContentTitle": {
+      "type": "string"
+    },
+    "ServiceContentBriefIntroduction": {
+      "type": "text"
+    },
+    "ServiceContentComponents": {
+      "type": "component",
+      "component": "common.title-desc",
+      "repeatable": true
+    },
+    "ServiceValuePropositionTitle": {
+      "type": "string"
+    },
+    "ServiceValuePropositionBriefIntroduction": {
+      "type": "blocks"
+    },
+    "ServiceValuePropositionComponents": {
+      "type": "component",
+      "component": "common.image-components",
+      "repeatable": true
+    }
+  }
+}

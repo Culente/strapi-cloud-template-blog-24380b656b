@@ -1,0 +1,28 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_kdcs",
+  "info": {
+    "singularName": "about-kdc",
+    "pluralName": "about-kdcs",
+    "displayName": "AboutKDC"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teams": {
+      "type": "component",
+      "component": "common.image-components",
+      "repeatable": true
+    },
+    "Partner": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

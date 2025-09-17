@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newses",
+  "info": {
+    "singularName": "news",
+    "pluralName": "newses",
+    "displayName": "news"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "Subtitle": {
+      "type": "string"
+    },
+    "Author": {
+      "type": "string"
+    },
+    "industrys": {
+      "type": "enumeration",
+      "enum": [
+        "Digital infrastructure",
+        "Data Center",
+        "A5G",
+        "Semiconductor",
+        "Compute-Network Integration",
+        "Digital Technology",
+        "Cloud Computing",
+        "AI",
+        "Blockchain",
+        "Big Data",
+        "IIoT",
+        "IoT",
+        "AR/VR",
+        "Edge Computing",
+        "Privacy Computing",
+        "Digital Application",
+        "Fintech",
+        "Smart Healthcare",
+        "Smart Transportation",
+        "Digital Media",
+        "Self-Driving",
+        "Energy Storage",
+        "Photovoltaics",
+        "Industrial robots",
+        "UAV"
+      ]
+    },
+    "Source": {
+      "type": "string"
+    },
+    "SortOrder": {
+      "type": "integer"
+    },
+    "Reprint": {
+      "type": "boolean"
+    },
+    "Attachments": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Description": {
+      "type": "text"
+    },
+    "BannerImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "MobileCover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "PcCover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "Content": {
+      "type": "blocks"
+    }
+  }
+}

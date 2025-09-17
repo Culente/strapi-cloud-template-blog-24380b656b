@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_common_navs",
+  "info": {
+    "displayName": "nav",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Links": {
+      "type": "string"
+    },
+    "secendComponents": {
+      "type": "component",
+      "component": "common.title-desc",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

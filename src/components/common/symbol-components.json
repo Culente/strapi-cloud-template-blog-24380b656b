@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_common_symbol_components",
+  "info": {
+    "displayName": "SymbolComponents",
+    "icon": "priceTag"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Symbol": {
+      "type": "string"
+    },
+    "Number": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
