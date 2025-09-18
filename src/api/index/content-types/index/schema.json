@@ -15,6 +15,11 @@
       "type": "component",
       "component": "common.image-links-components",
       "repeatable": true
+    },
+    "indexCases": {
+      "type": "component",
+      "component": "common.image-links-components",
+      "repeatable": true
     }
   }
 }
