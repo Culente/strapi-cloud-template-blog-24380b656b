@@ -54,6 +54,24 @@ export interface CommonNav extends Struct.ComponentSchema {
   };
 }
 
+export interface CommonServices extends Struct.ComponentSchema {
+  collectionName: 'components_common_services';
+  info: {
+    displayName: 'services';
+    icon: 'command';
+  };
+  attributes: {
+    channelBanner: Schema.Attribute.Media<'images' | 'files'>;
+    channelDescription: Schema.Attribute.Blocks;
+    channelName: Schema.Attribute.String;
+    servicesDescription: Schema.Attribute.String;
+    SuccessfulCasesComponents: Schema.Attribute.Component<
+      'common.image-components',
+      true
+    >;
+  };
+}
+
 export interface CommonSymbolComponents extends Struct.ComponentSchema {
   collectionName: 'components_common_symbol_components';
   info: {
@@ -149,6 +167,7 @@ declare module '@strapi/strapi' {
       'common.image-links-components': CommonImageLinksComponents;
       'common.more-text-components': CommonMoreTextComponents;
       'common.nav': CommonNav;
+      'common.services': CommonServices;
       'common.symbol-components': CommonSymbolComponents;
       'common.title-desc': CommonTitleDesc;
       'shared.media': SharedMedia;

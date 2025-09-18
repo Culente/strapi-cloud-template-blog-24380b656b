@@ -613,6 +613,10 @@ export interface ApiIndexIndex extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    indexCases: Schema.Attribute.Component<
+      'common.image-links-components',
+      true
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::index.index'> &
       Schema.Attribute.Private;
@@ -642,7 +646,7 @@ export interface ApiIndustriesChannelIndustriesChannel
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     industryIntroductionContent: Schema.Attribute.Blocks;
-    industryIntroductionImage: Schema.Attribute.Blocks;
+    industryIntroductionImage: Schema.Attribute.Media<'images' | 'files'>;
     industryIntroductionTitle: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
@@ -752,6 +756,7 @@ export interface ApiIndustryAnalysisIndustryAnalysis
   };
   attributes: {
     channelBanner: Schema.Attribute.Media<'images' | 'files'>;
+    channelDescription: Schema.Attribute.String;
     channelName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -868,6 +873,7 @@ export interface ApiInvsetmentConsultingInvsetmentConsulting
   };
   attributes: {
     channelBanner: Schema.Attribute.Media<'images' | 'files'>;
+    channelDescription: Schema.Attribute.String;
     channelName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -941,6 +947,7 @@ export interface ApiMarketIntelligenceMarketIntelligence
   };
   attributes: {
     channelBanner: Schema.Attribute.Media<'images' | 'files'>;
+    channelDescription: Schema.Attribute.String;
     channelName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1041,6 +1048,35 @@ export interface ApiNewsNews extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiServicesChannelServicesChannel
+  extends Struct.SingleTypeSchema {
+  collectionName: 'services_channels';
+  info: {
+    displayName: 'ServicesChannel';
+    pluralName: 'services-channels';
+    singularName: 'services-channel';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::services-channel.services-channel'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    servicesSettings: Schema.Attribute.Component<'common.services', true>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiStrategicAdvisoryStrategicAdvisory
   extends Struct.CollectionTypeSchema {
   collectionName: 'strategic_advisories';
@@ -1054,6 +1090,7 @@ export interface ApiStrategicAdvisoryStrategicAdvisory
   };
   attributes: {
     channelBanner: Schema.Attribute.Media<'images' | 'files'>;
+    channelDescription: Schema.Attribute.String;
     channelName: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1611,6 +1648,7 @@ declare module '@strapi/strapi' {
       'api::joinus.joinus': ApiJoinusJoinus;
       'api::market-intelligence.market-intelligence': ApiMarketIntelligenceMarketIntelligence;
       'api::news.news': ApiNewsNews;
+      'api::services-channel.services-channel': ApiServicesChannelServicesChannel;
       'api::strategic-advisory.strategic-advisory': ApiStrategicAdvisoryStrategicAdvisory;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_common_services",
+  "info": {
+    "displayName": "services",
+    "icon": "command"
+  },
+  "options": {},
+  "attributes": {
+    "channelName": {
+      "type": "string"
+    },
+    "channelBanner": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "channelDescription": {
+      "type": "blocks"
+    },
+    "servicesDescription": {
+      "type": "string"
+    },
+    "SuccessfulCasesComponents": {
+      "type": "component",
+      "component": "common.image-components",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

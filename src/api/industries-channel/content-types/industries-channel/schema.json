@@ -31,8 +31,13 @@
     "industryIntroductionContent": {
       "type": "blocks"
     },
-    "industryIntroductionImage": {
-      "type": "blocks"
+    "industryIntroductionImage":  {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
     },
     "ResourcesandCapabilitiesTitle": {
       "type": "string"

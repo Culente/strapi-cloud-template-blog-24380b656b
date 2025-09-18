@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "services_channels",
+  "info": {
+    "singularName": "services-channel",
+    "pluralName": "services-channels",
+    "displayName": "ServicesChannel"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "servicesSettings": {
+      "type": "component",
+      "component": "common.services",
+      "repeatable": true
+    }
+  }
+}

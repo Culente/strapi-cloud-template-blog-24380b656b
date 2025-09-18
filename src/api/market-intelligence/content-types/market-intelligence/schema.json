@@ -22,6 +22,9 @@
         "files"
       ]
     },
+    "channelDescription": {
+      "type": "string"
+    },
     "ServiceIntroductionTitle": {
       "type": "string"
     },
