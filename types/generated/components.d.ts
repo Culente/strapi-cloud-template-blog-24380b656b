@@ -8,7 +8,7 @@ export interface CommonImageComponents extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     Title: Schema.Attribute.String;
   };
 }
