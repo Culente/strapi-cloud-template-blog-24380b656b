@@ -21,7 +21,7 @@ export interface CommonImageLinksComponents extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.Text;
-    Image: Schema.Attribute.Media<'images' | 'files'>;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
     Link: Schema.Attribute.String;
     Remark: Schema.Attribute.Text;
     Title: Schema.Attribute.String;

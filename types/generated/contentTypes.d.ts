@@ -1048,6 +1048,77 @@ export interface ApiNewsNews extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiReportReport extends Struct.CollectionTypeSchema {
+  collectionName: 'reports';
+  info: {
+    displayName: 'report';
+    pluralName: 'reports';
+    singularName: 'report';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Attachments: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    Author: Schema.Attribute.String;
+    BannerImage: Schema.Attribute.Media<'images' | 'files'>;
+    Content: Schema.Attribute.Blocks;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    Description: Schema.Attribute.Text;
+    industrys: Schema.Attribute.Enumeration<
+      [
+        'Digital infrastructure',
+        'Data Center',
+        'A5G',
+        'Semiconductor',
+        'Compute-Network Integration',
+        'Digital Technology',
+        'Cloud Computing',
+        'AI',
+        'Blockchain',
+        'Big Data',
+        'IIoT',
+        'IoT',
+        'AR/VR',
+        'Edge Computing',
+        'Privacy Computing',
+        'Digital Application',
+        'Fintech',
+        'Smart Healthcare',
+        'Smart Transportation',
+        'Digital Media',
+        'Self-Driving',
+        'Energy Storage',
+        'Photovoltaics',
+        'Industrial robots',
+        'UAV',
+      ]
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::report.report'
+    > &
+      Schema.Attribute.Private;
+    MobileCover: Schema.Attribute.Media<'images' | 'files'>;
+    PcCover: Schema.Attribute.Media<'images' | 'files'>;
+    publishedAt: Schema.Attribute.DateTime;
+    Reprint: Schema.Attribute.Boolean;
+    SortOrder: Schema.Attribute.Integer;
+    Source: Schema.Attribute.String;
+    Subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServicesChannelServicesChannel
   extends Struct.SingleTypeSchema {
   collectionName: 'services_channels';
@@ -1648,6 +1719,7 @@ declare module '@strapi/strapi' {
       'api::joinus.joinus': ApiJoinusJoinus;
       'api::market-intelligence.market-intelligence': ApiMarketIntelligenceMarketIntelligence;
       'api::news.news': ApiNewsNews;
+      'api::report.report': ApiReportReport;
       'api::services-channel.services-channel': ApiServicesChannelServicesChannel;
       'api::strategic-advisory.strategic-advisory': ApiStrategicAdvisoryStrategicAdvisory;
       'plugin::content-releases.release': PluginContentReleasesRelease;
